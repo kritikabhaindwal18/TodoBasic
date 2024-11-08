@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Magic Notes</title>
+  <link rel="shortcut icon" href="./notepad.png" type="image/x-icon" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      border-radius:50px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #171717;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    #magicnote {
+      margin: 0;
+      font-size: 24px;
+      color:#ffffff;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 10px;
+    }
+
+    .button-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 500px;
+      cursor: pointer;
+      transition: background-color 0.5s;
+    }
+
+    .button-container button:hover {
+      background-color: #405973;
+      color: rgb(255, 255, 255);
+      border-radius: 50px;
+    }
+
+
+    .horizontal-card {
+      border: 2px solid rgb(0, 0, 0);
+      margin-bottom: 10px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .delete-btn,
+    .update-btn {
+      background-color: red;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 3px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+
+    .delete-btn {
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+    }
+
+    .edit-btn {
+      width: 25px;
+      height: 26px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="magicnote">Magic Notes</h1>
+    <div class="button-container">
+      <button id="login"onclick="window.location.href='http://3.7.73.252:8000/login/login.html'">Login</button>
+      <button id="signup"onclick="window.location.href='http://3.7.73.252:8000/signup/signup.html'">Signup</button>
+      <button id="logout" style="display: none;">Logout</button>
+    </div>
+  </header>
+  <div class="card-body">
+    <h4 class="card-title">Take a note</h4>
+    <div class="form-group">
+      <input class="form-control" id="addTxt" rows="3" />
+      <button class="btn btn-primary" id="submitBtn">Add Note</button>
+    </div>
+    <hr />
+    <h3>Your Notes</h3>
+    <div id="notes" class="row container-fluid">
+      <!-- <div class="card horizontal-card">
+        <p class="card-text">Example Note 1</p>
+        <div class="button-group">
+          <button class="btn btn-danger delete-btn">Delete</button>
+          <button class="btn btn-success update-btn">Mark as Done</button>
+        </div>
+      </div> -->
+    </div>
+  </form>
+  <script src="./app.js"></script>
+</body>
+</html>
